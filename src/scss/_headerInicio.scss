@@ -1,0 +1,83 @@
+/*-------HEADER-------*/
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.busca {
+    border-radius: 9px;
+    color: transparent;
+    border: none;
+    background: none;
+    outline: none;
+    color: #858585;
+    font-size: 15px;
+    float: left;
+    line-height: 60px;
+    margin-left: 100px;
+}
+
+.btn-input {
+    border-radius: 15px;
+}
+
+.buscar {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    background: #1c1929;
+    padding: 10px;
+    height: 20px;
+    border-radius: 40px;
+}
+
+.boton {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+
+}
+
+.billetera {
+    width: 35px;
+    opacity: 0.2;
+    border-right: 1px solid #a197aa;
+}
+
+.connect {
+    font-size: 15px;
+    opacity: 0.7;
+    font-family: 'Viga', sans-serif;
+    color: #a197aa;
+    text-decoration: none;
+    padding: 8px
+}
+
+.wallet {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.wallet-flex {
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #8fa319a6;
+    border-radius: 7px;
+    width: fit-content;
+}
+
+.wallet-flex:hover {
+    transform: scale(1.05);
+}

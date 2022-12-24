@@ -1,0 +1,30 @@
+/*-------FOOTER-------*/
+
+.footerIndex {
+    background-color: #0a070e;
+    padding: 30px;
+    border-top: #a197aa;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-red {
+    justify-content: space-between;
+}
+
+.red-social {
+    width: 30px;
+    opacity: 0.2;
+}
+
+.copyright {
+    color: #a197aa50;
+    font-family: 'Prompt', sans-serif;
+    font-size: 13px;
+}
+
+.red-social:hover {
+    transform: scale(1.10);
+}

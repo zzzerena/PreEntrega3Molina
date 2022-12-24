@@ -1,0 +1,323 @@
+/*MEDIA TELEFONO*/
+
+@media(max-width:480px) and (min-width:320px) {
+
+    .bodyIndex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 80px 200px 200px 400px;
+        grid-template-areas: "nav     nav"
+            "header  header"
+            "main    main"
+            "aside    aside"
+            "footer  footer"
+
+    }
+
+    .navbar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 40px;
+        grid-template-areas: "anclas     logo      carro"
+    }
+
+    nav ul {
+        display: flex;
+        grid-area: anclas;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        left: -250px;
+        background-color: #1c1929;
+        width: 200px;
+        height: 100vh;
+        transition: 0.2s;
+        z-index: 100;
+    }
+
+    .wallet {
+        visibility: hidden;
+    }
+
+
+    .navbar {
+        width: 100%;
+        grid-area: nav;
+        background: #1c1929;
+        top: 0px;
+        font-size: 15px;
+        z-index: 2;
+        flex-wrap: wrap;
+    }
+
+    .fa-bars {
+        visibility: visible;
+        cursor: pointer;
+        grid-area: anclas;
+        color: #7c0d4e;
+        font-size: 20px;
+        align-self: center;
+        justify-self: flex-start;
+        margin-left: 10px;
+    }
+
+    .fa-bars:hover+ul {
+        left: 0;
+    }
+
+    nav ul:hover {
+        left: 0;
+    }
+
+
+    .compras {
+        display: flex;
+        grid-area: carro;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .container-navbar {
+        grid-area: anclas;
+        display: flex;
+        justify-content: start;
+    }
+
+    .carrito {
+        grid-area: carro;
+        width: 23px;
+        color: white;
+        position: relative;
+        right: 1em;
+        margin-right: 10px;
+    }
+
+    .game-img {
+        width: 170px;
+    }
+
+    .texto {
+        text-align: center;
+        font-size: 25px;
+        color: #8fa319a6;
+        font-family: 'Viga', sans-serif;
+    }
+
+    .texto1 {
+        text-align: center;
+        font-size: 25px;
+        color: #1a56b1a6;
+        font-family: 'Viga', sans-serif;
+    }
+
+    .texto2 {
+        font-size: 25px;
+        color: #a31959a6;
+        font-family: 'Viga', sans-serif;
+    }
+
+    .mainIndex {
+        display: flex;
+        grid-area: main;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+    }
+
+    .aside-img {
+        display: flex;
+        grid-area: aside;
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+        margin-bottom: 200px;
+    }
+
+
+    .footerIndex {
+        background-color: #0a070e;
+        padding: 30px;
+        border-top: #a197aa;
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        align-self: end;
+    }
+
+
+    .formulario {
+        border: none;
+    }
+
+    /*alargar cards*/
+
+    .bodyCards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 80px 100px 350px 350px 350px 350px 350px;
+        grid-template-areas: "nav     nav"
+            "header  header"
+            "texto   texto"
+            "zona1  zona1"
+            "zona1  zona1"
+            "zona1  zona1"
+            "zona1  zona1"
+            "zona1  zona1";
+
+    }
+
+    .productos {
+        font-size: 18px;
+    }
+
+    .btn {
+        visibility: hidden;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-auto-rows: 150px 50px 50px 50px;
+        grid-template-areas: "foto"
+            "header"
+            "texto"
+            "btn";
+
+        border: 1px solid rgb(212, 66, 146);
+        background-color: transparent;
+        border-radius: 11px;
+        overflow: auto;
+        border: 1px solid #a197aa8a;
+        box-shadow: 0 0 1em .4em #70545400;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 15px;
+        width: 200px;
+    }
+
+
+    .tittle {
+        display: flex;
+        grid-area: header;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .desc {
+        grid-area: texto;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen {
+        grid-area: foto;
+        width: 190px;
+        height: 140px;
+        padding: 5px;
+    }
+
+    .main-cards {
+        grid-area: zona1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .button-two {
+        visibility: visible;
+        grid-area: btn;
+        align-self: end;
+        justify-self: center;
+        width: 70px;
+        height: 35px;
+        background-color: transparent;
+        color: aliceblue;
+        border: 1px solid rgb(161, 0, 113);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .button-two:hover {
+        background-color: #3b3a3b70;
+    }
+
+    /*AYUDA RESPONSIVE*/
+
+
+    .bodyAyuda {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 300px 100px 500px 500px 200px;
+        grid-template-areas: "nav     nav"
+            "zona    zona"
+            "header  header"
+            "main    main"
+            "aside   aside"
+            "footer  footer";
+
+    }
+
+    .mainAyuda {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .asideAyuda {
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardAyuda {
+        grid-area: main;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100px;
+        background-color: transparent;
+        color: #858585;
+        margin: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cardAyudaAside {
+        grid-area: aside;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100px;
+        background-color: transparent;
+        color: #858585;
+        margin: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .net,
+    .net1,
+    .net2 {
+        font-size: large;
+        text-align: center;
+        margin: 5px;
+    }
+}

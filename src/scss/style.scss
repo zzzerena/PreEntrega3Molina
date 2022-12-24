@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #120c18;
+    margin: 0;
+}
+
+@import "navbar";
+@import "headerInicio";
+@import "mainInicio";
+@import "FooterInicio";
+@import "contacto";
+@import "productos";
+@import "nosotros";
+@import "contacto";
+@import "ayuda";
+@import "aside";
+@import "grids";
+@import "mediaPC";
+@import "mediaTablet";
+@import "mediaTelefono";

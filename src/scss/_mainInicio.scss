@@ -1,0 +1,53 @@
+/*-------MAIN-------*/
+
+.mainIndex {
+    display: flex;
+    grid-area: main;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.texto,
+.texto1,
+.texto2 {
+    grid-area: text;
+    justify-items: center;
+
+}
+
+.texto {
+    font-size: 40px;
+    color: #8fa319a6;
+    font-family: 'Viga', sans-serif;
+}
+
+.texto1 {
+    font-size: 40px;
+    color: #1a56b1a6;
+    font-family: 'Viga', sans-serif;
+}
+
+.texto2 {
+    font-size: 40px;
+    color: #a31959a6;
+    font-family: 'Viga', sans-serif;
+}
+
+.nosotros {
+    font-size: 40px;
+    color: #8fa319a6;
+    font-family: 'Viga', sans-serif;
+}
+
+.nosotros1 {
+    font-size: 40px;
+    color: #1a56b1a6;
+    font-family: 'Viga', sans-serif;
+}
+
+.nosotros2 {
+    font-size: 40px;
+    color: #a31959a6;
+    font-family: 'Viga', sans-serif;
+}

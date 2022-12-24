@@ -1,0 +1,105 @@
+/*-------NAVBAR-------*/
+
+.navbar {
+    grid-area: nav;
+    background: #1c1929;
+    width: 100%;
+    top: 0px;
+    font-size: 15px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    grid-template-areas: "logo     logo      carro"
+}
+
+
+
+.container-navbar {
+    grid-area: logo;
+    display: flex;
+    gap: 20em;
+    margin-left: 1em;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    position: relative;
+}
+
+.navbar ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+
+}
+
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    background-color: #1c1929;
+}
+
+.navbar ul li:hover ul {
+    display: block;
+}
+
+.network {
+    margin-left: 10px;
+    grid-area: logo;
+    position: relative;
+    top: 2.5px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.anclas {
+    grid-area: anclas;
+    text-decoration: none;
+    color: #a197aa;
+    font-family: 'Prompt', sans-serif;
+    font-size: 15px;
+    padding-top: 10%;
+    justify-content: flex-end;
+}
+
+.itemColor {
+    color: #a197aa;
+    font-family: 'Prompt', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.ancla-color {
+    color: rgb(161, 0, 113);
+    font-family: 'Prompt', sans-serif;
+}
+
+.itemColor:hover {
+    color: orange;
+}
+
+.carrito {
+    width: 23px;
+    color: white;
+    position: relative;
+    right: 1em;
+}
+
+.compras {
+    display: flex;
+    grid-area: carro;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

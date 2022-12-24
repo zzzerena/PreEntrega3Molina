@@ -1,0 +1,69 @@
+/*NOSOTROS GRIDS*/
+
+
+.bodyNosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 80px 250px 500px 200px;
+    grid-template-areas: "nav     nav"
+        "header  header"
+        "main    main"
+        "aside    aside"
+        "footer  footer"
+
+
+}
+
+.mainNosotros {
+    display: flex;
+    grid-area: main;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.game-aside {
+    grid-area: aside;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.gameimg {
+    width: 200px;
+    height: 200px;
+
+}
+
+.games-nos {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameimg {
+    animation: movimiento 2.5s linear infinite;
+
+}
+
+.net {
+    display: flex;
+    font-size: 40px;
+    color: #8fa319a6;
+    font-family: 'Viga', sans-serif;
+    justify-content: center;
+}
+
+.net1 {
+    font-size: 25px;
+    color: #1a56b1a6;
+    font-family: 'Viga', sans-serif;
+}
+
+.net2 {
+    font-size: 25px;
+    color: #a31959a6;
+    font-family: 'Viga', sans-serif;
+}

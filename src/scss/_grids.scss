@@ -1,0 +1,27 @@
+/*-------GRIDS BODY INICIO-------*/
+
+.bodyIndex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 80px 400px 300px 200px;
+    grid-template-areas: "nav     nav     nav     nav"
+        "header  header  header  header"
+        "main    main    aside     aside"
+        "space    space    aside     aside"
+        "footer  footer  footer  footer"
+
+}
+
+/*AYUDA GRIDS*/
+
+.bodyAyuda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 300px 100px 700px 200px;
+    grid-template-areas: "nav     nav"
+        "zona     zona"
+        "header  header"
+        "main     aside"
+        "footer  footer"
+
+}

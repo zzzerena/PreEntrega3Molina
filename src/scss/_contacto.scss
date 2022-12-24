@@ -1,0 +1,123 @@
+/*----FORMULARIO CONTACTO----*/
+
+.formulario {
+    background: transparent;
+    border: 1px solid rgb(161, 0, 113);
+    border-radius: 20px;
+    color: rgb(161, 0, 113);
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 60px 60px 60px 60px 150px 110px;
+    grid-template-areas: "zona1"
+        "zona2"
+        "zona3"
+        "zona4"
+        "zona5"
+        "zona6"
+        "zona7";
+}
+
+.formulario label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.formulario label input,
+.formulario label textarea {
+    background-color: transparent;
+    border: 1px solid rgb(161, 0, 113);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(168, 168, 168);
+    padding: 10px;
+}
+
+.textarea {
+    width: 300px;
+    height: 100px;
+    resize: none;
+}
+
+.formulario label input {
+    width: 300px;
+    height: 100px;
+}
+
+.imagenContact {
+    display: grid;
+    grid-area: zona1;
+    width: 70px;
+    height: 70px;
+}
+
+.formulario label:nth-child(2) {
+    grid-area: zona2;
+}
+
+.formulario label:nth-child(3) {
+    grid-area: zona3;
+}
+
+.formulario label:nth-child(4) {
+    grid-area: zona4;
+}
+
+.formulario label:nth-child(5) {
+    grid-area: zona5;
+}
+
+.formulario label:nth-child(6) {
+    grid-area: zona6;
+}
+
+.formulario button:nth-child(7) {
+    grid-area: zona7;
+    background-color: rgb(90, 2, 64);
+    border-radius: 5px;
+    margin: 10px;
+    color: #b36f9c;
+    width: 80px;
+    height: 40px;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid rgb(126, 0, 80);
+}
+
+.formulario button:hover {
+    background-color: #300824;
+}
+
+
+.bodyContact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 80px 800px;
+    grid-template-areas: "nav     nav     nav     nav"
+        "header  header  header  header"
+        "main    main    main     main"
+}
+
+form {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 600px;
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenContactDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,1617 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #120c18;
+  margin: 0;
+}
+
+/*-------NAVBAR-------*/
+.navbar {
+  grid-area: nav;
+  background: #1c1929;
+  width: 100%;
+  top: 0px;
+  font-size: 15px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40px;
+  grid-template-areas: "logo     logo      carro";
+}
+
+.container-navbar {
+  grid-area: logo;
+  display: flex;
+  gap: 20em;
+  margin-left: 1em;
+}
+
+.navbar {
+  list-style-type: none;
+}
+
+.navbar ul li {
+  display: inline;
+  position: relative;
+}
+
+.navbar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar ul li ul {
+  display: none;
+  position: absolute;
+  left: 0px;
+  background-color: #1c1929;
+}
+
+.navbar ul li:hover ul {
+  display: block;
+}
+
+.network {
+  margin-left: 10px;
+  grid-area: logo;
+  position: relative;
+  top: 2.5px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.anclas {
+  grid-area: anclas;
+  text-decoration: none;
+  color: #a197aa;
+  font-family: "Prompt", sans-serif;
+  font-size: 15px;
+  padding-top: 10%;
+  justify-content: flex-end;
+}
+
+.itemColor {
+  color: #a197aa;
+  font-family: "Prompt", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.ancla-color {
+  color: rgb(161, 0, 113);
+  font-family: "Prompt", sans-serif;
+}
+
+.itemColor:hover {
+  color: orange;
+}
+
+.carrito {
+  width: 23px;
+  color: white;
+  position: relative;
+  right: 1em;
+}
+
+.compras {
+  display: flex;
+  grid-area: carro;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/*-------HEADER-------*/
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.busca {
+  border-radius: 9px;
+  color: transparent;
+  border: none;
+  background: none;
+  outline: none;
+  color: #858585;
+  font-size: 15px;
+  float: left;
+  line-height: 60px;
+  margin-left: 100px;
+}
+
+.btn-input {
+  border-radius: 15px;
+}
+
+.buscar {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  background: #1c1929;
+  padding: 10px;
+  height: 20px;
+  border-radius: 40px;
+}
+
+.boton {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.billetera {
+  width: 35px;
+  opacity: 0.2;
+  border-right: 1px solid #a197aa;
+}
+
+.connect {
+  font-size: 15px;
+  opacity: 0.7;
+  font-family: "Viga", sans-serif;
+  color: #a197aa;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.wallet {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.wallet-flex {
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid rgba(143, 163, 25, 0.6509803922);
+  border-radius: 7px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.wallet-flex:hover {
+  transform: scale(1.05);
+}
+
+/*-------MAIN-------*/
+.mainIndex {
+  display: flex;
+  grid-area: main;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.texto,
+.texto1,
+.texto2 {
+  grid-area: text;
+  justify-items: center;
+}
+
+.texto {
+  font-size: 40px;
+  color: rgba(143, 163, 25, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+.texto1 {
+  font-size: 40px;
+  color: rgba(26, 86, 177, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+.texto2 {
+  font-size: 40px;
+  color: rgba(163, 25, 89, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+.nosotros {
+  font-size: 40px;
+  color: rgba(143, 163, 25, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+.nosotros1 {
+  font-size: 40px;
+  color: rgba(26, 86, 177, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+.nosotros2 {
+  font-size: 40px;
+  color: rgba(163, 25, 89, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+/*-------FOOTER-------*/
+.footerIndex {
+  background-color: #0a070e;
+  padding: 30px;
+  border-top: #a197aa;
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-red {
+  justify-content: space-between;
+}
+
+.red-social {
+  width: 30px;
+  opacity: 0.2;
+}
+
+.copyright {
+  color: rgba(161, 151, 170, 0.3137254902);
+  font-family: "Prompt", sans-serif;
+  font-size: 13px;
+}
+
+.red-social:hover {
+  transform: scale(1.1);
+}
+
+/*----FORMULARIO CONTACTO----*/
+.formulario {
+  background: transparent;
+  border: 1px solid rgb(161, 0, 113);
+  border-radius: 20px;
+  color: rgb(161, 0, 113);
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 60px 60px 60px 60px 150px 110px;
+  grid-template-areas: "zona1" "zona2" "zona3" "zona4" "zona5" "zona6" "zona7";
+}
+
+.formulario label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.formulario label input,
+.formulario label textarea {
+  background-color: transparent;
+  border: 1px solid rgb(161, 0, 113);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(168, 168, 168);
+  padding: 10px;
+}
+
+.textarea {
+  width: 300px;
+  height: 100px;
+  resize: none;
+}
+
+.formulario label input {
+  width: 300px;
+  height: 100px;
+}
+
+.imagenContact {
+  display: grid;
+  grid-area: zona1;
+  width: 70px;
+  height: 70px;
+}
+
+.formulario label:nth-child(2) {
+  grid-area: zona2;
+}
+
+.formulario label:nth-child(3) {
+  grid-area: zona3;
+}
+
+.formulario label:nth-child(4) {
+  grid-area: zona4;
+}
+
+.formulario label:nth-child(5) {
+  grid-area: zona5;
+}
+
+.formulario label:nth-child(6) {
+  grid-area: zona6;
+}
+
+.formulario button:nth-child(7) {
+  grid-area: zona7;
+  background-color: rgb(90, 2, 64);
+  border-radius: 5px;
+  margin: 10px;
+  color: #b36f9c;
+  width: 80px;
+  height: 40px;
+  align-self: center;
+  justify-self: center;
+  border: 1px solid rgb(126, 0, 80);
+}
+
+.formulario button:hover {
+  background-color: #300824;
+}
+
+.bodyContact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 80px 800px;
+  grid-template-areas: "nav     nav     nav     nav" "header  header  header  header" "main    main    main     main";
+}
+
+form {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 600px;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenContactDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-------CARDS-------*/
+.bodyCards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 40px 80px 100px 600px;
+  grid-template-areas: "nav     nav     nav     nav     nav" "header  header  header  header  header" "texto   texto   texto   texto   texto" "main  main   main  main   main";
+}
+
+.productos {
+  grid-area: texto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-cards {
+  grid-area: main;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 215px 30px 50px 60px;
+  grid-template-areas: "foto" "header" "texto" "btn";
+  border: 1px solid rgb(212, 66, 146);
+  background-color: transparent;
+  width: 240px;
+  height: 353px;
+  border-radius: 11px;
+  overflow: auto;
+  border: 1px solid rgba(161, 151, 170, 0.5411764706);
+  box-shadow: 0 0 1em 0.4em rgba(112, 84, 84, 0.1647058824);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.imagen {
+  width: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.desc {
+  text-align: center;
+  padding: 5px;
+}
+
+.tittle {
+  padding: 10px;
+  color: rgba(161, 151, 170, 0.5411764706);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.desc {
+  color: rgba(161, 151, 170, 0.3568627451);
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  color: aliceblue;
+  border: 1px solid rgb(161, 0, 113);
+  border-radius: 5px;
+  padding: 10px;
+  justify-self: center;
+}
+
+.btn:hover {
+  background-color: #3b3a3b;
+}
+
+.btn-input {
+  border-radius: 15px;
+}
+
+.boton {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.productos {
+  text-align: center;
+  font-size: 30px;
+  color: #68223f;
+  font-family: "Prompt", sans-serif;
+}
+
+.button-two {
+  visibility: hidden;
+}
+
+/*NOSOTROS GRIDS*/
+.bodyNosotros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40px 80px 250px 500px 200px;
+  grid-template-areas: "nav     nav" "header  header" "main    main" "aside    aside" "footer  footer";
+}
+
+.mainNosotros {
+  display: flex;
+  grid-area: main;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.game-aside {
+  grid-area: aside;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.gameimg {
+  width: 200px;
+  height: 200px;
+}
+
+.games-nos {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameimg {
+  -webkit-animation: movimiento 2.5s linear infinite;
+          animation: movimiento 2.5s linear infinite;
+}
+
+.net {
+  display: flex;
+  font-size: 40px;
+  color: rgba(143, 163, 25, 0.6509803922);
+  font-family: "Viga", sans-serif;
+  justify-content: center;
+}
+
+.net1 {
+  font-size: 25px;
+  color: rgba(26, 86, 177, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+.net2 {
+  font-size: 25px;
+  color: rgba(163, 25, 89, 0.6509803922);
+  font-family: "Viga", sans-serif;
+}
+
+/*----FORMULARIO CONTACTO----*/
+.formulario {
+  background: transparent;
+  border: 1px solid rgb(161, 0, 113);
+  border-radius: 20px;
+  color: rgb(161, 0, 113);
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 60px 60px 60px 60px 150px 110px;
+  grid-template-areas: "zona1" "zona2" "zona3" "zona4" "zona5" "zona6" "zona7";
+}
+
+.formulario label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.formulario label input,
+.formulario label textarea {
+  background-color: transparent;
+  border: 1px solid rgb(161, 0, 113);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(168, 168, 168);
+  padding: 10px;
+}
+
+.textarea {
+  width: 300px;
+  height: 100px;
+  resize: none;
+}
+
+.formulario label input {
+  width: 300px;
+  height: 100px;
+}
+
+.imagenContact {
+  display: grid;
+  grid-area: zona1;
+  width: 70px;
+  height: 70px;
+}
+
+.formulario label:nth-child(2) {
+  grid-area: zona2;
+}
+
+.formulario label:nth-child(3) {
+  grid-area: zona3;
+}
+
+.formulario label:nth-child(4) {
+  grid-area: zona4;
+}
+
+.formulario label:nth-child(5) {
+  grid-area: zona5;
+}
+
+.formulario label:nth-child(6) {
+  grid-area: zona6;
+}
+
+.formulario button:nth-child(7) {
+  grid-area: zona7;
+  background-color: rgb(90, 2, 64);
+  border-radius: 5px;
+  margin: 10px;
+  color: #b36f9c;
+  width: 80px;
+  height: 40px;
+  align-self: center;
+  justify-self: center;
+  border: 1px solid rgb(126, 0, 80);
+}
+
+.formulario button:hover {
+  background-color: #300824;
+}
+
+.bodyContact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 80px 800px;
+  grid-template-areas: "nav     nav     nav     nav" "header  header  header  header" "main    main    main     main";
+}
+
+form {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 600px;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenContactDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-------AYUDA-------*/
+.mainAyuda {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.asideAyuda {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cardAyuda {
+  grid-area: main;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 120px;
+  background-color: transparent;
+  color: #858585;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.cardAyudaAside {
+  grid-area: aside;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 120px;
+  background-color: transparent;
+  color: #858585;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.tt {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.parrafo {
+  font-size: 15px;
+}
+
+.cardAyuda:hover {
+  background-color: rgba(107, 95, 100, 0.1176470588);
+}
+
+.cardAyudaAside:hover {
+  background-color: rgba(107, 95, 100, 0.1176470588);
+}
+
+.zona {
+  display: flex;
+  grid-area: zona;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgb(78, 21, 62) 13%, rgb(102, 34, 68) 100%);
+}
+
+.fa-bars {
+  grid-area: anclas;
+  visibility: hidden;
+}
+
+/*-------ASIDE-------*/
+aside {
+  grid-area: aside;
+}
+
+.game-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-img {
+  display: flex;
+  justify-content: center;
+  grid-area: aside;
+}
+
+.game-img {
+  width: 445px;
+}
+
+.game-img {
+  -webkit-animation: movimiento 2.5s linear infinite;
+          animation: movimiento 2.5s linear infinite;
+}
+
+@-webkit-keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.game-imgnos {
+  width: 445px;
+  margin-left: 1063px;
+  margin-top: 136px;
+  -webkit-animation: movimiento 2.5 linear infinite;
+          animation: movimiento 2.5 linear infinite;
+}
+
+.game-imgnos {
+  -webkit-animation: movimiento 2.5s linear infinite;
+          animation: movimiento 2.5s linear infinite;
+}
+
+.aside-img {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  margin-left: 115px;
+  margin-top: 100px;
+}
+
+/*-------GRIDS BODY INICIO-------*/
+.bodyIndex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 80px 400px 300px 200px;
+  grid-template-areas: "nav     nav     nav     nav" "header  header  header  header" "main    main    aside     aside" "space    space    aside     aside" "footer  footer  footer  footer";
+}
+
+/*AYUDA GRIDS*/
+.bodyAyuda {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 40px 300px 100px 700px 200px;
+  grid-template-areas: "nav     nav" "zona     zona" "header  header" "main     aside" "footer  footer";
+}
+
+/*MEDIA COMPUTADORA*/
+@media (max-width: 1300px) and (min-width: 1024px) {
+  .navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 800px 100px;
+    grid-template-rows: 40px;
+    grid-template-areas: "logo     logo      carro";
+  }
+  .navbar {
+    grid-area: nav;
+    background: #1c1929;
+    width: 100%;
+    top: 0px;
+    font-size: 15px;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+  .game-img {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    grid-area: aside;
+  }
+  .carrito {
+    width: 23px;
+    color: white;
+    position: relative;
+    right: 1em;
+    margin-right: 10px;
+  }
+  .wallet {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin-right: 20px;
+  }
+  .container-navbar {
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-start;
+  }
+  nav ul {
+    position: relative;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 160px 30px 60px 45px;
+    grid-template-areas: "foto" "header" "texto" "btn";
+    border: 1px solid rgb(212, 66, 146);
+    background-color: transparent;
+    width: 180px;
+    height: 295px;
+    border-radius: 11px;
+    overflow: auto;
+    border: 1px solid rgba(161, 151, 170, 0.5411764706);
+    box-shadow: 0 0 1em 0.4em rgba(112, 84, 84, 0.0901960784);
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .btn {
+    grid-area: btn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    align-self: center;
+    justify-self: center;
+    width: 70px;
+    height: 30px;
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid rgb(161, 0, 113);
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .tittle {
+    font-size: 19px;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  .desc {
+    grid-area: texto;
+  }
+  .imagen {
+    grid-area: foto;
+  }
+  .net,
+.net1,
+.net2 {
+    font-size: 20px;
+  }
+}
+/*MEDIA COMPUTADORA 2do BREAKPOINT*/
+@media (max-width: 1023px) and (min-width: 768px) {
+  .navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    grid-template-areas: "anclas     logo      carro";
+  }
+  nav ul {
+    display: flex;
+    grid-area: anclas;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -250px;
+    background-color: #1c1929;
+    width: 200px;
+    height: 100vh;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  .navbar {
+    width: 100%;
+    grid-area: nav;
+    background: #1c1929;
+    top: 0px;
+    font-size: 15px;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+  .fa-bars {
+    grid-area: anclas;
+    visibility: visible;
+    cursor: pointer;
+    color: #7c0d4e;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .fa-bars:hover + ul {
+    left: 0;
+  }
+  nav ul:hover {
+    left: 0;
+  }
+  .compras {
+    display: flex;
+    grid-area: carro;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .container-navbar {
+    width: 100px;
+    grid-area: anclas;
+    left: 0;
+  }
+  .network {
+    display: flex;
+    grid-area: logo;
+    justify-content: center;
+  }
+  .logo {
+    grid-area: logo;
+  }
+  .carrito {
+    grid-area: carro;
+    width: 23px;
+    color: white;
+    position: relative;
+    right: 1em;
+    margin-right: 10px;
+  }
+  .game-img {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    grid-area: aside;
+  }
+  .texto {
+    font-size: 30px;
+    color: rgba(143, 163, 25, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .texto1 {
+    font-size: 30px;
+    color: rgba(26, 86, 177, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .texto2 {
+    font-size: 30px;
+    color: rgba(163, 25, 89, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .mainIndex {
+    display: flex;
+    grid-area: main;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  .aside-img {
+    display: flex;
+    grid-area: aside;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 120px;
+  }
+  /*alargar cards*/
+  .bodyCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 80px 100px 800px;
+    grid-template-areas: "nav     nav" "header  header" "texto   texto" "main  main";
+  }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 70px 70px;
+    grid-template-areas: "zona1  zona1    comprar" "zona1   zona1    comprar";
+    border: 1px solid rgb(212, 66, 146);
+    background-color: transparent;
+    width: 90%;
+    height: 100vh;
+    border-radius: 9px;
+    overflow: auto;
+    border: 1px solid rgba(161, 151, 170, 0.5411764706);
+    box-shadow: 0 0 1em 0.4em rgba(112, 84, 84, 0);
+    /*no lo puedo quitar*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 10px;
+  }
+  .tittle {
+    display: flex;
+    grid-area: zona1;
+    align-items: center;
+    justify-content: center;
+  }
+  .desc {
+    visibility: hidden;
+  }
+  .imagen {
+    grid-area: zona1;
+    width: 140px;
+    padding: 5px;
+  }
+  .main-cards {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .button-two {
+    visibility: visible;
+    grid-area: comprar;
+    align-self: center;
+    justify-self: end;
+    margin-right: 25px;
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid rgb(161, 0, 113);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .button-two:hover {
+    background-color: rgba(59, 58, 59, 0.2941176471);
+  }
+  .btn {
+    visibility: hidden;
+  }
+  .net,
+.net1,
+.net2 {
+    font-size: 15px;
+  }
+}
+/*MEDIA TABLET*/
+@media (max-width: 768px) and (min-width: 480px) {
+  .productos {
+    font-size: 20px;
+  }
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 80px 200px 200px 300px;
+    grid-template-areas: "nav     nav" "header  header" "main    main" "aside    aside" "footer  footer";
+  }
+  .navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    grid-template-areas: "anclas     logo      carro";
+  }
+  nav ul {
+    display: flex;
+    grid-area: anclas;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -250px;
+    background-color: #1c1929;
+    width: 200px;
+    height: 100vh;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  .wallet {
+    visibility: hidden;
+  }
+  .navbar {
+    width: 100%;
+    grid-area: nav;
+    background: #1c1929;
+    top: 0px;
+    font-size: 15px;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+  .fa-bars {
+    visibility: visible;
+    cursor: pointer;
+    grid-area: anclas;
+    color: #7c0d4e;
+    font-size: 20px;
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 10px;
+  }
+  .fa-bars:hover + ul {
+    left: 0;
+  }
+  nav ul:hover {
+    left: 0;
+  }
+  .compras {
+    display: flex;
+    grid-area: carro;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .network {
+    display: flex;
+    grid-area: logo;
+    justify-content: center;
+  }
+  .logo {
+    grid-area: logo;
+  }
+  .container-navbar {
+    grid-area: anclas;
+    display: flex;
+    justify-content: start;
+  }
+  .carrito {
+    grid-area: carro;
+    width: 23px;
+    color: white;
+    position: relative;
+    right: 1em;
+    margin-right: 10px;
+  }
+  .game-img {
+    width: 200px;
+  }
+  .texto {
+    text-align: center;
+    font-size: 30px;
+    color: rgba(143, 163, 25, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .texto1 {
+    text-align: center;
+    font-size: 30px;
+    color: rgba(26, 86, 177, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .texto2 {
+    font-size: 30px;
+    color: rgba(163, 25, 89, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .mainIndex {
+    display: flex;
+    grid-area: main;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  .aside-img {
+    display: flex;
+    grid-area: aside;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    margin-bottom: 200px;
+  }
+  .footerIndex {
+    background-color: #0a070e;
+    padding: 30px;
+    border-top: #a197aa;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  footer {
+    display: flex;
+    align-self: end;
+  }
+  .formulario {
+    border: none;
+  }
+  /*alargar cards*/
+  .bodyCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 80px 100px 800px;
+    grid-template-areas: "nav     nav" "header  header" "texto   texto" "main  main";
+  }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 70px 70px;
+    grid-template-areas: "zona1  zona2    comprar" "zona1   zona2    comprar";
+    border: 1px solid rgb(212, 66, 146);
+    background-color: transparent;
+    width: 90%;
+    height: 100vh;
+    border-radius: 9px;
+    overflow: auto;
+    border: 1px solid rgba(161, 151, 170, 0.5411764706);
+    box-shadow: 0 0 1em 0.4em rgba(112, 84, 84, 0);
+    /*no lo puedo quitar*/
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 10px;
+  }
+  .tittle {
+    display: flex;
+    grid-area: zona2;
+    align-items: center;
+    justify-content: center;
+  }
+  .desc {
+    visibility: hidden;
+  }
+  .imagen {
+    grid-area: zona1;
+    width: 140px;
+    padding: 5px;
+  }
+  .main-cards {
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .button-two {
+    visibility: visible;
+    grid-area: comprar;
+    align-self: center;
+    justify-self: end;
+    margin-right: 25px;
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid rgb(161, 0, 113);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .button-two:hover {
+    background-color: rgba(59, 58, 59, 0.3960784314);
+  }
+  /*AYUDA RESPONSIVE*/
+  .bodyAyuda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 300px 100px 500px 500px 200px;
+    grid-template-areas: "nav     nav" "zona    zona" "header  header" "main    main" "aside   aside" "footer  footer";
+  }
+  .mainAyuda {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .asideAyuda {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardAyuda {
+    grid-area: main;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 120px;
+    background-color: transparent;
+    color: #858585;
+    margin: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+  .cardAyudaAside {
+    grid-area: aside;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 120px;
+    background-color: transparent;
+    color: #858585;
+    margin: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+  .net,
+.net1,
+.net2 {
+    font-size: larger;
+    text-align: center;
+  }
+}
+/*MEDIA TELEFONO*/
+@media (max-width: 480px) and (min-width: 320px) {
+  .bodyIndex {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 80px 200px 200px 400px;
+    grid-template-areas: "nav     nav" "header  header" "main    main" "aside    aside" "footer  footer";
+  }
+  .navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
+    grid-template-areas: "anclas     logo      carro";
+  }
+  nav ul {
+    display: flex;
+    grid-area: anclas;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -250px;
+    background-color: #1c1929;
+    width: 200px;
+    height: 100vh;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  .wallet {
+    visibility: hidden;
+  }
+  .navbar {
+    width: 100%;
+    grid-area: nav;
+    background: #1c1929;
+    top: 0px;
+    font-size: 15px;
+    z-index: 2;
+    flex-wrap: wrap;
+  }
+  .fa-bars {
+    visibility: visible;
+    cursor: pointer;
+    grid-area: anclas;
+    color: #7c0d4e;
+    font-size: 20px;
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 10px;
+  }
+  .fa-bars:hover + ul {
+    left: 0;
+  }
+  nav ul:hover {
+    left: 0;
+  }
+  .compras {
+    display: flex;
+    grid-area: carro;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .container-navbar {
+    grid-area: anclas;
+    display: flex;
+    justify-content: start;
+  }
+  .carrito {
+    grid-area: carro;
+    width: 23px;
+    color: white;
+    position: relative;
+    right: 1em;
+    margin-right: 10px;
+  }
+  .game-img {
+    width: 170px;
+  }
+  .texto {
+    text-align: center;
+    font-size: 25px;
+    color: rgba(143, 163, 25, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .texto1 {
+    text-align: center;
+    font-size: 25px;
+    color: rgba(26, 86, 177, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .texto2 {
+    font-size: 25px;
+    color: rgba(163, 25, 89, 0.6509803922);
+    font-family: "Viga", sans-serif;
+  }
+  .mainIndex {
+    display: flex;
+    grid-area: main;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+  }
+  .aside-img {
+    display: flex;
+    grid-area: aside;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    margin-bottom: 200px;
+  }
+  .footerIndex {
+    background-color: #0a070e;
+    padding: 30px;
+    border-top: #a197aa;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    align-self: end;
+  }
+  .formulario {
+    border: none;
+  }
+  /*alargar cards*/
+  .bodyCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 80px 100px 350px 350px 350px 350px 350px;
+    grid-template-areas: "nav     nav" "header  header" "texto   texto" "zona1  zona1" "zona1  zona1" "zona1  zona1" "zona1  zona1" "zona1  zona1";
+  }
+  .productos {
+    font-size: 18px;
+  }
+  .btn {
+    visibility: hidden;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-auto-rows: 150px 50px 50px 50px;
+    grid-template-areas: "foto" "header" "texto" "btn";
+    border: 1px solid rgb(212, 66, 146);
+    background-color: transparent;
+    border-radius: 11px;
+    overflow: auto;
+    border: 1px solid rgba(161, 151, 170, 0.5411764706);
+    box-shadow: 0 0 1em 0.4em rgba(112, 84, 84, 0);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 15px;
+    width: 200px;
+  }
+  .tittle {
+    display: flex;
+    grid-area: header;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .desc {
+    grid-area: texto;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imagen {
+    grid-area: foto;
+    width: 190px;
+    height: 140px;
+    padding: 5px;
+  }
+  .main-cards {
+    grid-area: zona1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .button-two {
+    visibility: visible;
+    grid-area: btn;
+    align-self: end;
+    justify-self: center;
+    width: 70px;
+    height: 35px;
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid rgb(161, 0, 113);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .button-two:hover {
+    background-color: rgba(59, 58, 59, 0.4392156863);
+  }
+  /*AYUDA RESPONSIVE*/
+  .bodyAyuda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 300px 100px 500px 500px 200px;
+    grid-template-areas: "nav     nav" "zona    zona" "header  header" "main    main" "aside   aside" "footer  footer";
+  }
+  .mainAyuda {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .asideAyuda {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardAyuda {
+    grid-area: main;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    background-color: transparent;
+    color: #858585;
+    margin: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+  .cardAyudaAside {
+    grid-area: aside;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    background-color: transparent;
+    color: #858585;
+    margin: 15px;
+    text-align: center;
+    justify-content: center;
+  }
+  .net,
+.net1,
+.net2 {
+    font-size: large;
+    text-align: center;
+    margin: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */

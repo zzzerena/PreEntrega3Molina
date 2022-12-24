@@ -1,0 +1,319 @@
+/*MEDIA TABLET*/
+
+@media(max-width:768px) and (min-width:480px) {
+
+    .productos {
+        font-size: 20px;
+    }
+
+    .bodyIndex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 80px 200px 200px 300px;
+        grid-template-areas: "nav     nav"
+            "header  header"
+            "main    main"
+            "aside    aside"
+            "footer  footer"
+
+    }
+
+    .navbar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 40px;
+        grid-template-areas: "anclas     logo      carro"
+    }
+
+    nav ul {
+        display: flex;
+        grid-area: anclas;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        left: -250px;
+        background-color: #1c1929;
+        width: 200px;
+        height: 100vh;
+        transition: 0.2s;
+        z-index: 100;
+    }
+
+    .wallet {
+        visibility: hidden;
+    }
+
+
+    .navbar {
+        width: 100%;
+        grid-area: nav;
+        background: #1c1929;
+        top: 0px;
+        font-size: 15px;
+        z-index: 2;
+        flex-wrap: wrap;
+    }
+
+    .fa-bars {
+        visibility: visible;
+        cursor: pointer;
+        grid-area: anclas;
+        color: #7c0d4e;
+        font-size: 20px;
+        align-self: center;
+        justify-self: flex-start;
+        margin-left: 10px;
+    }
+
+    .fa-bars:hover+ul {
+        left: 0;
+    }
+
+    nav ul:hover {
+        left: 0;
+    }
+
+
+    .compras {
+        display: flex;
+        grid-area: carro;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .network {
+        display: flex;
+        grid-area: logo;
+        justify-content: center;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .container-navbar {
+        grid-area: anclas;
+        display: flex;
+        justify-content: start;
+    }
+
+    .carrito {
+        grid-area: carro;
+        width: 23px;
+        color: white;
+        position: relative;
+        right: 1em;
+        margin-right: 10px;
+    }
+
+    .game-img {
+        width: 200px;
+    }
+
+    .texto {
+        text-align: center;
+        font-size: 30px;
+        color: #8fa319a6;
+        font-family: 'Viga', sans-serif;
+    }
+
+    .texto1 {
+        text-align: center;
+        font-size: 30px;
+        color: #1a56b1a6;
+        font-family: 'Viga', sans-serif;
+    }
+
+    .texto2 {
+        font-size: 30px;
+        color: #a31959a6;
+        font-family: 'Viga', sans-serif;
+    }
+
+    .mainIndex {
+        display: flex;
+        grid-area: main;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+    }
+
+    .aside-img {
+        display: flex;
+        grid-area: aside;
+        justify-content: center;
+        align-items: center;
+        margin: 100px;
+        margin-bottom: 200px;
+    }
+
+
+    .footerIndex {
+        background-color: #0a070e;
+        padding: 30px;
+        border-top: #a197aa;
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+    }
+
+    footer {
+        display: flex;
+        align-self: end;
+    }
+
+
+    .formulario {
+        border: none;
+    }
+
+    /*alargar cards*/
+
+    .bodyCards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 80px 100px 800px;
+        grid-template-areas: "nav     nav"
+            "header  header"
+            "texto   texto"
+            "main  main"
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 70px 70px;
+        grid-template-areas: "zona1  zona2    comprar"
+            "zona1   zona2    comprar";
+        border: 1px solid rgb(212, 66, 146);
+        background-color: transparent;
+        width: 90%;
+        height: 100vh;
+        border-radius: 9px;
+        overflow: auto;
+        border: 1px solid #a197aa8a;
+        box-shadow: 0 0 1em .4em #70545400;
+        /*no lo puedo quitar*/
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 10px;
+    }
+
+    .tittle {
+        display: flex;
+        grid-area: zona2;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc {
+        visibility: hidden;
+    }
+
+    .imagen {
+        grid-area: zona1;
+        width: 140px;
+        padding: 5px;
+    }
+
+    .main-cards {
+        grid-area: main;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .button-two {
+        visibility: visible;
+        grid-area: comprar;
+        align-self: center;
+        justify-self: end;
+        margin-right: 25px;
+        width: 80px;
+        height: 40px;
+        background-color: transparent;
+        color: aliceblue;
+        border: 1px solid rgb(161, 0, 113);
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .button-two:hover {
+        background-color: #3b3a3b65;
+    }
+
+
+    /*AYUDA RESPONSIVE*/
+
+
+    .bodyAyuda {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 300px 100px 500px 500px 200px;
+        grid-template-areas: "nav     nav"
+            "zona    zona"
+            "header  header"
+            "main    main"
+            "aside   aside"
+            "footer  footer";
+
+    }
+
+    .mainAyuda {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .asideAyuda {
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardAyuda {
+        grid-area: main;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 120px;
+        background-color: transparent;
+        color: #858585;
+        margin: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cardAyudaAside {
+        grid-area: aside;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 120px;
+        background-color: transparent;
+        color: #858585;
+        margin: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .net,
+    .net1,
+    .net2 {
+        font-size: larger;
+        text-align: center;
+    }
+
+
+}
