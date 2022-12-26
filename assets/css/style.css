@@ -405,9 +405,6 @@ form {
 .main-cards .btn:hover {
   background-color: #3b3a3b;
 }
-.main-cards:hover {
-  transform: scale(1.05);
-}
 
 .card {
   display: grid;
@@ -447,6 +444,10 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 /*NOSOTROS GRIDS*/
