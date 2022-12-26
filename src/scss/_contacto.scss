@@ -24,6 +24,12 @@
     justify-content: center;
     flex-direction: column;
     padding: 10px;
+
+    .textarea {
+        width: 300px;
+        height: 100px;
+        resize: none;
+    }
 }
 
 .formulario label input,
@@ -36,23 +42,14 @@
     padding: 10px;
 }
 
-.textarea {
-    width: 300px;
-    height: 100px;
-    resize: none;
-}
+
 
 .formulario label input {
     width: 300px;
     height: 100px;
 }
 
-.imagenContact {
-    display: grid;
-    grid-area: zona1;
-    width: 70px;
-    height: 70px;
-}
+
 
 .formulario label:nth-child(2) {
     grid-area: zona2;
@@ -85,10 +82,10 @@
     align-self: center;
     justify-self: center;
     border: 1px solid rgb(126, 0, 80);
-}
 
-.formulario button:hover {
-    background-color: #300824;
+    &:hover {
+        background-color: #300824;
+    }
 }
 
 
@@ -98,7 +95,7 @@
     grid-template-rows: 40px 80px 800px;
     grid-template-areas: "nav     nav     nav     nav"
         "header  header  header  header"
-        "main    main    main     main"
+        "main    main    main     main";
 }
 
 form {
@@ -120,4 +117,21 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .imagenContact {
+        display: grid;
+        grid-area: zona1;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+.boton {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+
 }

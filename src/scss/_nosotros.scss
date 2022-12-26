@@ -1,6 +1,5 @@
 /*NOSOTROS GRIDS*/
 
-
 .bodyNosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -9,9 +8,7 @@
         "header  header"
         "main    main"
         "aside    aside"
-        "footer  footer"
-
-
+        "footer  footer";
 }
 
 .mainNosotros {
@@ -19,32 +16,16 @@
     grid-area: main;
     align-items: flex-end;
     justify-content: center;
-}
 
-.game-aside {
-    grid-area: aside;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 50px;
-}
+    .games-nos {
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
 
-.gameimg {
-    width: 200px;
-    height: 200px;
+    }
 
-}
-
-.games-nos {
-    grid-area: main;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.gameimg {
-    animation: movimiento 2.5s linear infinite;
 
 }
 
@@ -66,4 +47,28 @@
     font-size: 25px;
     color: #a31959a6;
     font-family: 'Viga', sans-serif;
+}
+
+.game-aside {
+    grid-area: aside;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;
+
+    .gameimg {
+        width: 200px;
+        height: 200px;
+
+        & {
+            animation: movimiento 2.5s linear infinite;
+        }
+    }
+}
+
+.game-imgnos {
+    width: 445px;
+    margin-left: 1063px;
+    margin-top: 136px;
+    animation: movimiento 2.5 linear infinite;
 }

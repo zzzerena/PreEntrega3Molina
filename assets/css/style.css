@@ -25,6 +25,27 @@ body {
   grid-template-rows: 40px;
   grid-template-areas: "logo     logo      carro";
 }
+.navbar .network {
+  margin-left: 10px;
+  grid-area: logo;
+  position: relative;
+  top: 2.5px;
+}
+.navbar .network .logo {
+  width: 100px;
+}
+.navbar .compras {
+  display: flex;
+  grid-area: carro;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.navbar .compras .carrito {
+  width: 23px;
+  color: white;
+  position: relative;
+  right: 1em;
+}
 
 .container-navbar {
   grid-area: logo;
@@ -33,7 +54,12 @@ body {
   margin-left: 1em;
 }
 
-.navbar {
+.navbar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+}
+.navbar ul li a {
   list-style-type: none;
 }
 
@@ -41,33 +67,19 @@ body {
   display: inline;
   position: relative;
 }
-
-.navbar ul li a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 10px;
-}
-
 .navbar ul li ul {
   display: none;
   position: absolute;
   left: 0px;
   background-color: #1c1929;
 }
+.navbar ul li .ancla-color {
+  color: rgb(161, 0, 113);
+  font-family: "Prompt", sans-serif;
+}
 
-.navbar ul li:hover ul {
+ul li:hover ul {
   display: block;
-}
-
-.network {
-  margin-left: 10px;
-  grid-area: logo;
-  position: relative;
-  top: 2.5px;
-}
-
-.logo {
-  width: 100px;
 }
 
 .anclas {
@@ -86,28 +98,8 @@ body {
   font-size: 12px;
   text-align: center;
 }
-
-.ancla-color {
-  color: rgb(161, 0, 113);
-  font-family: "Prompt", sans-serif;
-}
-
 .itemColor:hover {
   color: orange;
-}
-
-.carrito {
-  width: 23px;
-  color: white;
-  position: relative;
-  right: 1em;
-}
-
-.compras {
-  display: flex;
-  grid-area: carro;
-  align-items: flex-end;
-  justify-content: flex-end;
 }
 
 /*-------HEADER-------*/
@@ -116,19 +108,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.busca {
-  border-radius: 9px;
-  color: transparent;
-  border: none;
-  background: none;
-  outline: none;
-  color: #858585;
-  font-size: 15px;
-  float: left;
-  line-height: 60px;
-  margin-left: 100px;
 }
 
 .btn-input {
@@ -146,28 +125,24 @@ header {
   height: 20px;
   border-radius: 40px;
 }
-
-.boton {
+.buscar .boton {
   width: 40px;
   height: 40px;
   text-decoration: none;
   color: white;
   font-size: 30px;
 }
-
-.billetera {
-  width: 35px;
-  opacity: 0.2;
-  border-right: 1px solid #a197aa;
-}
-
-.connect {
+.buscar .busca {
+  border-radius: 9px;
+  color: transparent;
+  border: none;
+  background: none;
+  outline: none;
+  color: #858585;
   font-size: 15px;
-  opacity: 0.7;
-  font-family: "Viga", sans-serif;
-  color: #a197aa;
-  text-decoration: none;
-  padding: 8px;
+  float: left;
+  line-height: 60px;
+  margin-left: 100px;
 }
 
 .wallet {
@@ -188,7 +163,19 @@ header {
   width: -moz-fit-content;
   width: fit-content;
 }
-
+.wallet-flex .connect {
+  font-size: 15px;
+  opacity: 0.7;
+  font-family: "Viga", sans-serif;
+  color: #a197aa;
+  text-decoration: none;
+  padding: 8px;
+}
+.wallet-flex .billetera {
+  width: 35px;
+  opacity: 0.2;
+  border-right: 1px solid #a197aa;
+}
 .wallet-flex:hover {
   transform: scale(1.05);
 }
@@ -201,10 +188,9 @@ header {
   justify-content: flex-end;
   margin-right: 20px;
 }
-
-.texto,
-.texto1,
-.texto2 {
+.mainIndex .texto,
+.mainIndex .texto1,
+.mainIndex .texto2 {
   grid-area: text;
   justify-items: center;
 }
@@ -227,24 +213,6 @@ header {
   font-family: "Viga", sans-serif;
 }
 
-.nosotros {
-  font-size: 40px;
-  color: rgba(143, 163, 25, 0.6509803922);
-  font-family: "Viga", sans-serif;
-}
-
-.nosotros1 {
-  font-size: 40px;
-  color: rgba(26, 86, 177, 0.6509803922);
-  font-family: "Viga", sans-serif;
-}
-
-.nosotros2 {
-  font-size: 40px;
-  color: rgba(163, 25, 89, 0.6509803922);
-  font-family: "Viga", sans-serif;
-}
-
 /*-------FOOTER-------*/
 .footerIndex {
   background-color: #0a070e;
@@ -259,20 +227,18 @@ header {
 .contenedor-red {
   justify-content: space-between;
 }
-
-.red-social {
+.contenedor-red .red-social {
   width: 30px;
   opacity: 0.2;
+}
+.contenedor-red .red-social:hover {
+  transform: scale(1.1);
 }
 
 .copyright {
   color: rgba(161, 151, 170, 0.3137254902);
   font-family: "Prompt", sans-serif;
   font-size: 13px;
-}
-
-.red-social:hover {
-  transform: scale(1.1);
 }
 
 /*----FORMULARIO CONTACTO----*/
@@ -295,6 +261,11 @@ header {
   flex-direction: column;
   padding: 10px;
 }
+.formulario label .textarea {
+  width: 300px;
+  height: 100px;
+  resize: none;
+}
 
 .formulario label input,
 .formulario label textarea {
@@ -306,22 +277,9 @@ header {
   padding: 10px;
 }
 
-.textarea {
-  width: 300px;
-  height: 100px;
-  resize: none;
-}
-
 .formulario label input {
   width: 300px;
   height: 100px;
-}
-
-.imagenContact {
-  display: grid;
-  grid-area: zona1;
-  width: 70px;
-  height: 70px;
 }
 
 .formulario label:nth-child(2) {
@@ -356,8 +314,7 @@ header {
   justify-self: center;
   border: 1px solid rgb(126, 0, 80);
 }
-
-.formulario button:hover {
+.formulario button:nth-child(7):hover {
   background-color: #300824;
 }
 
@@ -388,6 +345,20 @@ form {
   justify-content: center;
   align-items: center;
 }
+.imagenContactDiv .imagenContact {
+  display: grid;
+  grid-area: zona1;
+  width: 70px;
+  height: 70px;
+}
+
+.boton {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
 
 /*-------CARDS-------*/
 .bodyCards {
@@ -397,18 +368,45 @@ form {
   grid-template-areas: "nav     nav     nav     nav     nav" "header  header  header  header  header" "texto   texto   texto   texto   texto" "main  main   main  main   main";
 }
 
-.productos {
-  grid-area: texto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .main-cards {
   grid-area: main;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.main-cards .tittle {
+  padding: 10px;
+  color: rgba(161, 151, 170, 0.5411764706);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.main-cards .desc {
+  text-align: center;
+  padding: 5px;
+}
+.main-cards .desc {
+  color: rgba(161, 151, 170, 0.3568627451);
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+.main-cards .btn {
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  color: aliceblue;
+  border: 1px solid rgb(161, 0, 113);
+  border-radius: 5px;
+  padding: 10px;
+  justify-self: center;
+}
+.main-cards .btn:hover {
+  background-color: #3b3a3b;
+}
+.main-cards:hover {
+  transform: scale(1.05);
 }
 
 .card {
@@ -428,60 +426,16 @@ form {
   overflow-y: hidden;
 }
 
-.imagen {
-  width: 100%;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.desc {
-  text-align: center;
-  padding: 5px;
-}
-
-.tittle {
-  padding: 10px;
-  color: rgba(161, 151, 170, 0.5411764706);
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-.desc {
-  color: rgba(161, 151, 170, 0.3568627451);
-  font-size: 13px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 8px;
-  padding: 10px;
-}
-
-.btn {
-  width: 80px;
-  height: 40px;
-  background-color: transparent;
-  color: aliceblue;
-  border: 1px solid rgb(161, 0, 113);
-  border-radius: 5px;
-  padding: 10px;
-  justify-self: center;
-}
-
-.btn:hover {
-  background-color: #3b3a3b;
-}
-
 .btn-input {
   border-radius: 15px;
 }
 
-.boton {
-  width: 40px;
-  height: 40px;
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
+.button-two {
+  visibility: hidden;
+}
+
+.imagen {
+  width: 100%;
 }
 
 .productos {
@@ -489,10 +443,10 @@ form {
   font-size: 30px;
   color: #68223f;
   font-family: "Prompt", sans-serif;
-}
-
-.button-two {
-  visibility: hidden;
+  grid-area: texto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*NOSOTROS GRIDS*/
@@ -509,31 +463,12 @@ form {
   align-items: flex-end;
   justify-content: center;
 }
-
-.game-aside {
-  grid-area: aside;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.gameimg {
-  width: 200px;
-  height: 200px;
-}
-
-.games-nos {
+.mainNosotros .games-nos {
   grid-area: main;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-
-.gameimg {
-  -webkit-animation: movimiento 2.5s linear infinite;
-  animation: movimiento 2.5s linear infinite;
 }
 
 .net {
@@ -556,6 +491,30 @@ form {
   font-family: "Viga", sans-serif;
 }
 
+.game-aside {
+  grid-area: aside;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 50px;
+}
+.game-aside .gameimg {
+  width: 200px;
+  height: 200px;
+}
+.game-aside .gameimg {
+  -webkit-animation: movimiento 2.5s linear infinite;
+          animation: movimiento 2.5s linear infinite;
+}
+
+.game-imgnos {
+  width: 445px;
+  margin-left: 1063px;
+  margin-top: 136px;
+  -webkit-animation: movimiento 2.5 linear infinite;
+          animation: movimiento 2.5 linear infinite;
+}
+
 /*----FORMULARIO CONTACTO----*/
 .formulario {
   background: transparent;
@@ -576,6 +535,11 @@ form {
   flex-direction: column;
   padding: 10px;
 }
+.formulario label .textarea {
+  width: 300px;
+  height: 100px;
+  resize: none;
+}
 
 .formulario label input,
 .formulario label textarea {
@@ -587,22 +551,9 @@ form {
   padding: 10px;
 }
 
-.textarea {
-  width: 300px;
-  height: 100px;
-  resize: none;
-}
-
 .formulario label input {
   width: 300px;
   height: 100px;
-}
-
-.imagenContact {
-  display: grid;
-  grid-area: zona1;
-  width: 70px;
-  height: 70px;
 }
 
 .formulario label:nth-child(2) {
@@ -637,8 +588,7 @@ form {
   justify-self: center;
   border: 1px solid rgb(126, 0, 80);
 }
-
-.formulario button:hover {
+.formulario button:nth-child(7):hover {
   background-color: #300824;
 }
 
@@ -669,6 +619,20 @@ form {
   justify-content: center;
   align-items: center;
 }
+.imagenContactDiv .imagenContact {
+  display: grid;
+  grid-area: zona1;
+  width: 70px;
+  height: 70px;
+}
+
+.boton {
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
 
 /*-------AYUDA-------*/
 .mainAyuda {
@@ -678,16 +642,7 @@ form {
   align-items: flex-end;
   justify-content: center;
 }
-
-.asideAyuda {
-  grid-area: aside;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.cardAyuda {
+.mainAyuda .cardAyuda {
   grid-area: main;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -700,8 +655,25 @@ form {
   text-align: center;
   justify-content: center;
 }
+.mainAyuda .cardAyuda .tt {
+  font-size: 16px;
+  margin: 10px;
+}
+.mainAyuda .cardAyuda .parrafo {
+  font-size: 15px;
+}
+.mainAyuda .cardAyuda:hover {
+  background-color: rgba(107, 95, 100, 0.1176470588);
+}
 
-.cardAyudaAside {
+.asideAyuda {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.asideAyuda .cardAyudaAside {
   grid-area: aside;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -714,21 +686,14 @@ form {
   text-align: center;
   justify-content: center;
 }
-
-.tt {
+.asideAyuda .cardAyudaAside .tt {
   font-size: 16px;
   margin: 10px;
 }
-
-.parrafo {
+.asideAyuda .cardAyudaAside .parrafo {
   font-size: 15px;
 }
-
-.cardAyuda:hover {
-  background-color: rgba(107, 95, 100, 0.1176470588);
-}
-
-.cardAyudaAside:hover {
+.asideAyuda .cardAyudaAside:hover {
   background-color: rgba(107, 95, 100, 0.1176470588);
 }
 
@@ -753,33 +718,22 @@ aside {
 .game-img {
   display: flex;
   justify-content: center;
+  grid-area: aside;
   align-items: center;
 }
-
-.game-img {
-  display: flex;
-  justify-content: center;
-  grid-area: aside;
-}
-
 .game-img {
   width: 445px;
-}
-
-.game-img {
   -webkit-animation: movimiento 2.5s linear infinite;
-  animation: movimiento 2.5s linear infinite;
+          animation: movimiento 2.5s linear infinite;
 }
 
 @-webkit-keyframes movimiento {
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(15px);
   }
-
   100% {
     transform: translateY(0);
   }
@@ -789,29 +743,13 @@ aside {
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(15px);
   }
-
   100% {
     transform: translateY(0);
   }
 }
-
-.game-imgnos {
-  width: 445px;
-  margin-left: 1063px;
-  margin-top: 136px;
-  -webkit-animation: movimiento 2.5 linear infinite;
-  animation: movimiento 2.5 linear infinite;
-}
-
-.game-imgnos {
-  -webkit-animation: movimiento 2.5s linear infinite;
-  animation: movimiento 2.5s linear infinite;
-}
-
 .aside-img {
   grid-area: aside;
   display: flex;
@@ -845,7 +783,6 @@ aside {
     grid-template-rows: 40px;
     grid-template-areas: "logo     logo      carro";
   }
-
   .navbar {
     grid-area: nav;
     background: #1c1929;
@@ -855,14 +792,12 @@ aside {
     z-index: 2;
     flex-wrap: wrap;
   }
-
   .game-img {
     width: 350px;
     display: flex;
     justify-content: center;
     grid-area: aside;
   }
-
   .carrito {
     width: 23px;
     color: white;
@@ -870,7 +805,6 @@ aside {
     right: 1em;
     margin-right: 10px;
   }
-
   .wallet {
     width: 100%;
     display: flex;
@@ -878,17 +812,14 @@ aside {
     justify-content: end;
     margin-right: 20px;
   }
-
   .container-navbar {
     grid-area: logo;
     display: flex;
     justify-content: flex-start;
   }
-
   nav ul {
     position: relative;
   }
-
   .card {
     display: grid;
     grid-template-columns: 1fr;
@@ -905,7 +836,6 @@ aside {
     overflow-x: hidden;
     overflow-y: hidden;
   }
-
   .btn {
     grid-area: btn;
     display: flex;
@@ -922,7 +852,6 @@ aside {
     border-radius: 5px;
     font-size: 13px;
   }
-
   .tittle {
     font-size: 19px;
     grid-area: header;
@@ -931,22 +860,18 @@ aside {
     justify-content: center;
     margin-top: 12px;
   }
-
   .desc {
     grid-area: texto;
   }
-
   .imagen {
     grid-area: foto;
   }
-
   .net,
-  .net1,
-  .net2 {
+.net1,
+.net2 {
     font-size: 20px;
   }
 }
-
 /*MEDIA COMPUTADORA 2do BREAKPOINT*/
 @media (max-width: 1023px) and (min-width: 768px) {
   .navbar {
@@ -956,7 +881,6 @@ aside {
     grid-template-rows: 40px;
     grid-template-areas: "anclas     logo      carro";
   }
-
   nav ul {
     display: flex;
     grid-area: anclas;
@@ -970,7 +894,6 @@ aside {
     transition: 0.2s;
     z-index: 100;
   }
-
   .navbar {
     width: 100%;
     grid-area: nav;
@@ -980,7 +903,6 @@ aside {
     z-index: 2;
     flex-wrap: wrap;
   }
-
   .fa-bars {
     grid-area: anclas;
     visibility: visible;
@@ -989,38 +911,31 @@ aside {
     font-size: 20px;
     margin-left: 10px;
   }
-
-  .fa-bars:hover+ul {
+  .fa-bars:hover + ul {
     left: 0;
   }
-
   nav ul:hover {
     left: 0;
   }
-
   .compras {
     display: flex;
     grid-area: carro;
     align-items: flex-end;
     justify-content: flex-end;
   }
-
   .container-navbar {
     width: 100px;
     grid-area: anclas;
     left: 0;
   }
-
   .network {
     display: flex;
     grid-area: logo;
     justify-content: center;
   }
-
   .logo {
     grid-area: logo;
   }
-
   .carrito {
     grid-area: carro;
     width: 23px;
@@ -1029,32 +944,27 @@ aside {
     right: 1em;
     margin-right: 10px;
   }
-
   .game-img {
     width: 200px;
     display: flex;
     justify-content: center;
     grid-area: aside;
   }
-
   .texto {
     font-size: 30px;
     color: rgba(143, 163, 25, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .texto1 {
     font-size: 30px;
     color: rgba(26, 86, 177, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .texto2 {
     font-size: 30px;
     color: rgba(163, 25, 89, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .mainIndex {
     display: flex;
     grid-area: main;
@@ -1062,7 +972,6 @@ aside {
     justify-content: flex-end;
     margin-right: 20px;
   }
-
   .aside-img {
     display: flex;
     grid-area: aside;
@@ -1070,7 +979,6 @@ aside {
     justify-content: center;
     margin-bottom: 120px;
   }
-
   /*alargar cards*/
   .bodyCards {
     display: grid;
@@ -1078,7 +986,6 @@ aside {
     grid-template-rows: 40px 80px 100px 800px;
     grid-template-areas: "nav     nav" "header  header" "texto   texto" "main  main";
   }
-
   .card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1097,31 +1004,26 @@ aside {
     overflow-y: hidden;
     margin: 10px;
   }
-
   .tittle {
     display: flex;
     grid-area: zona1;
     align-items: center;
     justify-content: center;
   }
-
   .desc {
     visibility: hidden;
   }
-
   .imagen {
     grid-area: zona1;
     width: 140px;
     padding: 5px;
   }
-
   .main-cards {
     grid-area: main;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-
   .button-two {
     visibility: visible;
     grid-area: comprar;
@@ -1136,35 +1038,29 @@ aside {
     border-radius: 5px;
     padding: 10px;
   }
-
   .button-two:hover {
     background-color: rgba(59, 58, 59, 0.2941176471);
   }
-
   .btn {
     visibility: hidden;
   }
-
   .net,
-  .net1,
-  .net2 {
+.net1,
+.net2 {
     font-size: 15px;
   }
 }
-
 /*MEDIA TABLET*/
 @media (max-width: 768px) and (min-width: 480px) {
   .productos {
     font-size: 20px;
   }
-
   .bodyIndex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 40px 80px 200px 200px 300px;
     grid-template-areas: "nav     nav" "header  header" "main    main" "aside    aside" "footer  footer";
   }
-
   .navbar {
     width: 100%;
     display: grid;
@@ -1172,7 +1068,6 @@ aside {
     grid-template-rows: 40px;
     grid-template-areas: "anclas     logo      carro";
   }
-
   nav ul {
     display: flex;
     grid-area: anclas;
@@ -1186,11 +1081,9 @@ aside {
     transition: 0.2s;
     z-index: 100;
   }
-
   .wallet {
     visibility: hidden;
   }
-
   .navbar {
     width: 100%;
     grid-area: nav;
@@ -1200,7 +1093,6 @@ aside {
     z-index: 2;
     flex-wrap: wrap;
   }
-
   .fa-bars {
     visibility: visible;
     cursor: pointer;
@@ -1211,38 +1103,31 @@ aside {
     justify-self: flex-start;
     margin-left: 10px;
   }
-
-  .fa-bars:hover+ul {
+  .fa-bars:hover + ul {
     left: 0;
   }
-
   nav ul:hover {
     left: 0;
   }
-
   .compras {
     display: flex;
     grid-area: carro;
     align-items: flex-end;
     justify-content: flex-end;
   }
-
   .network {
     display: flex;
     grid-area: logo;
     justify-content: center;
   }
-
   .logo {
     grid-area: logo;
   }
-
   .container-navbar {
     grid-area: anclas;
     display: flex;
     justify-content: start;
   }
-
   .carrito {
     grid-area: carro;
     width: 23px;
@@ -1251,31 +1136,26 @@ aside {
     right: 1em;
     margin-right: 10px;
   }
-
   .game-img {
     width: 200px;
   }
-
   .texto {
     text-align: center;
     font-size: 30px;
     color: rgba(143, 163, 25, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .texto1 {
     text-align: center;
     font-size: 30px;
     color: rgba(26, 86, 177, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .texto2 {
     font-size: 30px;
     color: rgba(163, 25, 89, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .mainIndex {
     display: flex;
     grid-area: main;
@@ -1283,7 +1163,6 @@ aside {
     justify-content: center;
     margin-left: 15px;
   }
-
   .aside-img {
     display: flex;
     grid-area: aside;
@@ -1292,7 +1171,6 @@ aside {
     margin: 100px;
     margin-bottom: 200px;
   }
-
   .footerIndex {
     background-color: #0a070e;
     padding: 30px;
@@ -1303,16 +1181,13 @@ aside {
     align-items: center;
     height: 50px;
   }
-
   footer {
     display: flex;
     align-self: end;
   }
-
   .formulario {
     border: none;
   }
-
   /*alargar cards*/
   .bodyCards {
     display: grid;
@@ -1320,7 +1195,6 @@ aside {
     grid-template-rows: 40px 80px 100px 800px;
     grid-template-areas: "nav     nav" "header  header" "texto   texto" "main  main";
   }
-
   .card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1339,31 +1213,26 @@ aside {
     overflow-y: hidden;
     margin: 10px;
   }
-
   .tittle {
     display: flex;
     grid-area: zona2;
     align-items: center;
     justify-content: center;
   }
-
   .desc {
     visibility: hidden;
   }
-
   .imagen {
     grid-area: zona1;
     width: 140px;
     padding: 5px;
   }
-
   .main-cards {
     grid-area: main;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-
   .button-two {
     visibility: visible;
     grid-area: comprar;
@@ -1378,11 +1247,9 @@ aside {
     border-radius: 5px;
     padding: 10px;
   }
-
   .button-two:hover {
     background-color: rgba(59, 58, 59, 0.3960784314);
   }
-
   /*AYUDA RESPONSIVE*/
   .bodyAyuda {
     display: grid;
@@ -1390,7 +1257,6 @@ aside {
     grid-template-rows: 40px 300px 100px 500px 500px 200px;
     grid-template-areas: "nav     nav" "zona    zona" "header  header" "main    main" "aside   aside" "footer  footer";
   }
-
   .mainAyuda {
     grid-area: main;
     display: flex;
@@ -1398,7 +1264,6 @@ aside {
     align-items: center;
     justify-content: center;
   }
-
   .asideAyuda {
     grid-area: aside;
     display: flex;
@@ -1406,7 +1271,6 @@ aside {
     align-items: center;
     justify-content: center;
   }
-
   .cardAyuda {
     grid-area: main;
     font-family: Arial, Helvetica, sans-serif;
@@ -1420,7 +1284,6 @@ aside {
     text-align: center;
     justify-content: center;
   }
-
   .cardAyudaAside {
     grid-area: aside;
     font-family: Arial, Helvetica, sans-serif;
@@ -1434,15 +1297,13 @@ aside {
     text-align: center;
     justify-content: center;
   }
-
   .net,
-  .net1,
-  .net2 {
+.net1,
+.net2 {
     font-size: larger;
     text-align: center;
   }
 }
-
 /*MEDIA TELEFONO*/
 @media (max-width: 480px) and (min-width: 320px) {
   .bodyIndex {
@@ -1451,7 +1312,6 @@ aside {
     grid-template-rows: 40px 80px 200px 200px 400px;
     grid-template-areas: "nav     nav" "header  header" "main    main" "aside    aside" "footer  footer";
   }
-
   .navbar {
     width: 100%;
     display: grid;
@@ -1459,7 +1319,6 @@ aside {
     grid-template-rows: 40px;
     grid-template-areas: "anclas     logo      carro";
   }
-
   nav ul {
     display: flex;
     grid-area: anclas;
@@ -1473,11 +1332,9 @@ aside {
     transition: 0.2s;
     z-index: 100;
   }
-
   .wallet {
     visibility: hidden;
   }
-
   .navbar {
     width: 100%;
     grid-area: nav;
@@ -1487,7 +1344,6 @@ aside {
     z-index: 2;
     flex-wrap: wrap;
   }
-
   .fa-bars {
     visibility: visible;
     cursor: pointer;
@@ -1498,28 +1354,23 @@ aside {
     justify-self: flex-start;
     margin-left: 10px;
   }
-
-  .fa-bars:hover+ul {
+  .fa-bars:hover + ul {
     left: 0;
   }
-
   nav ul:hover {
     left: 0;
   }
-
   .compras {
     display: flex;
     grid-area: carro;
     align-items: flex-end;
     justify-content: flex-end;
   }
-
   .container-navbar {
     grid-area: anclas;
     display: flex;
     justify-content: start;
   }
-
   .carrito {
     grid-area: carro;
     width: 23px;
@@ -1528,31 +1379,26 @@ aside {
     right: 1em;
     margin-right: 10px;
   }
-
   .game-img {
     width: 170px;
   }
-
   .texto {
     text-align: center;
     font-size: 25px;
     color: rgba(143, 163, 25, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .texto1 {
     text-align: center;
     font-size: 25px;
     color: rgba(26, 86, 177, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .texto2 {
     font-size: 25px;
     color: rgba(163, 25, 89, 0.6509803922);
     font-family: "Viga", sans-serif;
   }
-
   .mainIndex {
     display: flex;
     grid-area: main;
@@ -1560,7 +1406,6 @@ aside {
     justify-content: center;
     margin-left: 15px;
   }
-
   .aside-img {
     display: flex;
     grid-area: aside;
@@ -1569,7 +1414,6 @@ aside {
     margin: 100px;
     margin-bottom: 200px;
   }
-
   .footerIndex {
     background-color: #0a070e;
     padding: 30px;
@@ -1580,17 +1424,14 @@ aside {
     align-items: center;
     height: 50px;
   }
-
   footer {
     grid-area: footer;
     display: flex;
     align-self: end;
   }
-
   .formulario {
     border: none;
   }
-
   /*alargar cards*/
   .bodyCards {
     display: grid;
@@ -1598,15 +1439,12 @@ aside {
     grid-template-rows: 40px 80px 100px 350px 350px 350px 350px 350px;
     grid-template-areas: "nav     nav" "header  header" "texto   texto" "zona1  zona1" "zona1  zona1" "zona1  zona1" "zona1  zona1" "zona1  zona1";
   }
-
   .productos {
     font-size: 18px;
   }
-
   .btn {
     visibility: hidden;
   }
-
   .card {
     display: grid;
     grid-template-columns: 200px;
@@ -1623,7 +1461,6 @@ aside {
     margin: 15px;
     width: 200px;
   }
-
   .tittle {
     display: flex;
     grid-area: header;
@@ -1631,7 +1468,6 @@ aside {
     justify-content: center;
     font-size: 20px;
   }
-
   .desc {
     grid-area: texto;
     visibility: visible;
@@ -1639,21 +1475,18 @@ aside {
     justify-content: center;
     align-items: center;
   }
-
   .imagen {
     grid-area: foto;
     width: 190px;
     height: 140px;
     padding: 5px;
   }
-
   .main-cards {
     grid-area: zona1;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-
   .button-two {
     visibility: visible;
     grid-area: btn;
@@ -1667,11 +1500,9 @@ aside {
     border-radius: 5px;
     padding: 10px;
   }
-
   .button-two:hover {
     background-color: rgba(59, 58, 59, 0.4392156863);
   }
-
   /*AYUDA RESPONSIVE*/
   .bodyAyuda {
     display: grid;
@@ -1679,7 +1510,6 @@ aside {
     grid-template-rows: 40px 300px 100px 500px 500px 200px;
     grid-template-areas: "nav     nav" "zona    zona" "header  header" "main    main" "aside   aside" "footer  footer";
   }
-
   .mainAyuda {
     grid-area: main;
     display: flex;
@@ -1687,7 +1517,6 @@ aside {
     align-items: center;
     justify-content: center;
   }
-
   .asideAyuda {
     grid-area: aside;
     display: flex;
@@ -1695,7 +1524,6 @@ aside {
     align-items: center;
     justify-content: center;
   }
-
   .cardAyuda {
     grid-area: main;
     font-family: Arial, Helvetica, sans-serif;
@@ -1709,7 +1537,6 @@ aside {
     text-align: center;
     justify-content: center;
   }
-
   .cardAyudaAside {
     grid-area: aside;
     font-family: Arial, Helvetica, sans-serif;
@@ -1723,14 +1550,11 @@ aside {
     text-align: center;
     justify-content: center;
   }
-
   .net,
-  .net1,
-  .net2 {
+.net1,
+.net2 {
     font-size: large;
     text-align: center;
     margin: 5px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

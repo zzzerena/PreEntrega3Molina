@@ -6,6 +6,33 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+
+    .cardAyuda {
+        grid-area: main;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 120px;
+        background-color: transparent;
+        color: #858585;
+        margin: 10px;
+        text-align: center;
+        justify-content: center;
+
+        .tt {
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        .parrafo {
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: #6b5f641e;
+        }
+    }
 }
 
 .asideAyuda {
@@ -14,51 +41,33 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-}
 
-.cardAyuda {
-    grid-area: main;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 120px;
-    background-color: transparent;
-    color: #858585;
-    margin: 10px;
-    text-align: center;
-    justify-content: center;
-}
+    .cardAyudaAside {
+        grid-area: aside;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 120px;
+        background-color: transparent;
+        color: #858585;
+        margin: 10px;
+        text-align: center;
+        justify-content: center;
 
-.cardAyudaAside {
-    grid-area: aside;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 120px;
-    background-color: transparent;
-    color: #858585;
-    margin: 10px;
-    text-align: center;
-    justify-content: center;
-}
+        .tt {
+            font-size: 16px;
+            margin: 10px;
+        }
 
-.tt {
-    font-size: 16px;
-    margin: 10px;
-}
+        .parrafo {
+            font-size: 15px;
+        }
 
-.parrafo {
-    font-size: 15px;
-}
-
-.cardAyuda:hover {
-    background-color: #6b5f641e;
-}
-
-.cardAyudaAside:hover {
-    background-color: #6b5f641e;
+        &:hover {
+            background-color: #6b5f641e;
+        }
+    }
 }
 
 .zona {

@@ -7,14 +7,7 @@
     grid-template-areas: "nav     nav     nav     nav     nav"
         "header  header  header  header  header"
         "texto   texto   texto   texto   texto"
-        "main  main   main  main   main"
-}
-
-.productos {
-    grid-area: texto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        "main  main   main  main   main";
 }
 
 .main-cards {
@@ -22,8 +15,49 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
 
+    .tittle {
+        padding: 10px;
+        color: #a197aa8a;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .desc {
+        text-align: center;
+        padding: 5px;
+
+        & {
+            color: #a197aa5b;
+            font-size: 13px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 8px;
+            padding: 10px;
+        }
+    }
+
+
+    .btn {
+        width: 80px;
+        height: 40px;
+        background-color: transparent;
+        color: aliceblue;
+        border: 1px solid rgb(161, 0, 113);
+        border-radius: 5px;
+        padding: 10px;
+        justify-self: center;
+
+        &:hover {
+            background-color: #3b3a3b;
+        }
+
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
 
 .card {
     display: grid;
@@ -46,61 +80,16 @@
     overflow-y: hidden;
 }
 
-.imagen {
-    width: 100%;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.desc {
-    text-align: center;
-    padding: 5px;
-}
-
-.tittle {
-    padding: 10px;
-    color: #a197aa8a;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.desc {
-    color: #a197aa5b;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 8px;
-    padding: 10px;
-}
-
-.btn {
-    width: 80px;
-    height: 40px;
-    background-color: transparent;
-    color: aliceblue;
-    border: 1px solid rgb(161, 0, 113);
-    border-radius: 5px;
-    padding: 10px;
-    justify-self: center;
-}
-
-.btn:hover {
-    background-color: #3b3a3b;
-}
-
 .btn-input {
     border-radius: 15px;
 }
 
-.boton {
-    width: 40px;
-    height: 40px;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
+.button-two {
+    visibility: hidden;
+}
 
+.imagen {
+    width: 100%;
 }
 
 .productos {
@@ -108,8 +97,8 @@
     font-size: 30px;
     color: #68223f;
     font-family: 'Prompt', sans-serif;
-}
-
-.button-two {
-    visibility: hidden;
+    grid-area: texto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -12,19 +12,19 @@
 
 .contenedor-red {
     justify-content: space-between;
-}
 
-.red-social {
-    width: 30px;
-    opacity: 0.2;
+    .red-social {
+        width: 30px;
+        opacity: 0.2;
+
+        &:hover {
+            transform: scale(1.10);
+        }
+    }
 }
 
 .copyright {
     color: #a197aa50;
     font-family: 'Prompt', sans-serif;
     font-size: 13px;
-}
-
-.red-social:hover {
-    transform: scale(1.10);
 }

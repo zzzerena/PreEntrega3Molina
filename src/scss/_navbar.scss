@@ -14,10 +14,34 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 40px;
-    grid-template-areas: "logo     logo      carro"
+    grid-template-areas: "logo     logo      carro";
+
+    .network {
+        margin-left: 10px;
+        grid-area: logo;
+        position: relative;
+        top: 2.5px;
+
+        .logo {
+            width: 100px;
+        }
+    }
+
+    .compras {
+        display: flex;
+        grid-area: carro;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .carrito {
+            width: 23px;
+            color: white;
+            position: relative;
+            right: 1em;
+        }
+    }
+
 }
-
-
 
 .container-navbar {
     grid-area: logo;
@@ -26,42 +50,36 @@
     margin-left: 1em;
 }
 
-.navbar {
-    list-style-type: none;
-}
-
-.navbar ul li {
-    display: inline;
-    position: relative;
-}
-
 .navbar ul li a {
     display: inline-block;
     text-decoration: none;
     padding: 10px;
 
+    & {
+        list-style-type: none;
+    }
 }
 
-.navbar ul li ul {
-    display: none;
-    position: absolute;
-    left: 0px;
-    background-color: #1c1929;
-}
-
-.navbar ul li:hover ul {
-    display: block;
-}
-
-.network {
-    margin-left: 10px;
-    grid-area: logo;
+.navbar ul li {
+    display: inline;
     position: relative;
-    top: 2.5px;
+
+    ul {
+        display: none;
+        position: absolute;
+        left: 0px;
+        background-color: #1c1929;
+
+    }
+
+    .ancla-color {
+        color: rgb(161, 0, 113);
+        font-family: 'Prompt', sans-serif;
+    }
 }
 
-.logo {
-    width: 100px;
+ul li:hover ul {
+    display: block;
 }
 
 .anclas {
@@ -79,27 +97,8 @@
     font-family: 'Prompt', sans-serif;
     font-size: 12px;
     text-align: center;
-}
 
-.ancla-color {
-    color: rgb(161, 0, 113);
-    font-family: 'Prompt', sans-serif;
-}
-
-.itemColor:hover {
-    color: orange;
-}
-
-.carrito {
-    width: 23px;
-    color: white;
-    position: relative;
-    right: 1em;
-}
-
-.compras {
-    display: flex;
-    grid-area: carro;
-    align-items: flex-end;
-    justify-content: flex-end;
+    &:hover {
+        color: orange;
+    }
 }

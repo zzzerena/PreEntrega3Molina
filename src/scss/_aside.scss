@@ -7,22 +7,13 @@ aside {
 .game-img {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.game-img {
-    display: flex;
-    justify-content: center;
     grid-area: aside;
-}
+    align-items: center;
 
-.game-img {
-    width: 445px;
-}
-
-.game-img {
-    animation: movimiento 2.5s linear infinite;
-
+    & {
+        width: 445px;
+        animation: movimiento 2.5s linear infinite;
+    }
 }
 
 @keyframes movimiento {
@@ -37,18 +28,6 @@ aside {
     100% {
         transform: translateY(0);
     }
-
-}
-
-.game-imgnos {
-    width: 445px;
-    margin-left: 1063px;
-    margin-top: 136px;
-    animation: movimiento 2.5 linear infinite;
-}
-
-.game-imgnos {
-    animation: movimiento 2.5s linear infinite;
 
 }
 
